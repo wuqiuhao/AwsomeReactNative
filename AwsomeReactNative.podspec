@@ -9,8 +9,8 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 
 Pod::Spec.new do |s|
   
-  s.name         = "AwsomeReactNative"
-  s.version      = "0.0.1"
+  s.name         = 'AwsomeReactNative'
+  s.version      = '0.0.2'
   s.summary      = "It's an awsome reactnative project."
   s.description  = <<-DESC
   It's an awsome reactnative project. I try to put react native in a separate project.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
   s.author             = { 'wuqiuhao' => 'wqiuhao@gmail.com' }
-  s.source       = { :git => 'https://github.com/wuqiuhao/AwsomeReactNative.git', :tag => '#{s.version}' }
+  s.source       = { :git => 'https://github.com/wuqiuhao/AwsomeReactNative.git', :tag => "#{s.version}" }
   s.source_files  = 'Classes', 'Classes/**/*.{swift}'
 #  s.default_subspec         = 'Core'
   s.platform     = :ios, '9.0'
@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'Core' do |ss|
       ss.dependency           'AwsomeReactNative/yoga'
-      ss.source_files         = 'node_modules/react-native/React/**/*.{h,m,mm,S}'
+      ss.source_files         = 'node_modules/react-native/React/**/*.{c,h,m,mm,S}'
       ss.exclude_files        = '**/__tests__/*',
                               'IntegrationTests/*',
                               'node_modules/react-native/React/DevSupport/*',

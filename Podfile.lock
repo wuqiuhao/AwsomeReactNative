@@ -102,7 +102,7 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  AwsomeReactNative: 2c28cb50ffac08b514b95ca5a8e7b6566268e3d1
+  AwsomeReactNative: fb5482ec6daf451cbd1c0e369a5a64c89d826dd4
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
   Folly: 211775e49d8da0ca658aebc8eab89d642935755c
