@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AwsomeReactNative
+import React
 
 class RNFlatListViewController: UIViewController {
     override func loadView() {

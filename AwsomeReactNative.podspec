@@ -10,49 +10,31 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
   
   s.name         = 'AwsomeReactNative'
-  s.version      = '0.0.2'
+  s.version      = '0.1.0'
   s.summary      = "It's an awsome reactnative project."
   s.description  = <<-DESC
   It's an awsome reactnative project. I try to put react native in a separate project.
   DESC
   s.homepage     = 'https://github.com/wuqiuhao/AwsomeReactNative'
   s.license      = 'MIT'
-  s.pod_target_xcconfig = { 'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14' }
+
   s.author             = { 'wuqiuhao' => 'wqiuhao@gmail.com' }
   s.source       = { :git => 'https://github.com/wuqiuhao/AwsomeReactNative.git', :tag => "#{s.version}" }
+  s.platform    = :ios, '9.0'
+  s.module_name  = 'React'
+  s.swift_version = '4.1'
+#  s.default_subspec = 'Core'
   s.source_files  = 'Classes', 'Classes/**/*.{swift}'
-#  s.default_subspec         = 'Core'
-  s.platform     = :ios, '9.0'
-  # s.requires_arc = true
-  # s.exclude_files = 'Classes/Exclude'
-  # s.public_header_files = 'Classes/**/*.h'
+  s.pod_target_xcconfig = {
+      'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14',
+      'OTHER_LDFLAGS' => '-ObjC',
+      'DEFINES_MODULE' => 'YES',
+      'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\' \'$(PODS_ROOT)/Folly\' \'$(PODS_ROOT)/boost-for-react-native\' \'$(PODS_ROOT)/DoubleConversion\''
+  }
   
-  
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-  
-  # s.resource  = 'icon.png'
-  # s.resources = 'Resources/*.png'
-  
-  # s.preserve_paths = 'FilesToSave', 'MoreFilesToSave'
-  
-  
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-  
-  # s.framework  = 'SomeFramework'
-  # s.frameworks = 'XCTest', 'JavaScriptCore'
-  
-  # s.library   = 'iconv'
-  # s.libraries = 'iconv', 'xml2'
+#  s.resource_bundles = {
+#      'AwsomeReactNative' => ['Classes/**/*.{storyboard,xib,xcassets,json,imageset,png}']
+#  }
   
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
@@ -61,21 +43,21 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Core' do |ss|
-      ss.dependency           'AwsomeReactNative/yoga'
+      ss.dependency             'AwsomeReactNative/yoga'
       ss.source_files         = 'node_modules/react-native/React/**/*.{c,h,m,mm,S}'
-      ss.exclude_files        = '**/__tests__/*',
-                              'IntegrationTests/*',
-                              'node_modules/react-native/React/DevSupport/*',
-                              'node_modules/react-native/React/Inspector/*',
-                              'node_modules/react-native/ReactCommon/yoga/*',
-                              'node_modules/react-native/React/Cxx*/*',
-                              'node_modules/react-native/React/Base/RCTBatchedBridge.mm',
-                              'node_modules/react-native/React/Executors/*'
+      ss.exclude_files        =
+                                '**/__tests__/*',
+                                'IntegrationTests/*',
+                                'node_modules/react-native/React/DevSupport/*',
+                                'node_modules/react-native/React/Inspector/*',
+                                'node_modules/react-native/ReactCommon/yoga/*',
+                                'node_modules/react-native/React/Cxx*/*',
+                                'node_modules/react-native/React/Base/RCTBatchedBridge.mm',
+                                'node_modules/react-native/React/Executors/*'
       ss.ios.exclude_files    = 'node_modules/react-native/React/**/RCTTVView.*'
       ss.header_dir           = 'node_modules/react-native/React'
       ss.framework            = 'JavaScriptCore'
       ss.libraries            = 'stdc++'
-      ss.pod_target_xcconfig  = { 'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\'' }
   end
   
   s.subspec 'BatchedBridge' do |ss|
@@ -105,7 +87,6 @@ Pod::Spec.new do |s|
       ss.source_files         = 'node_modules/react-native/ReactCommon/jschelpers/{JavaScriptCore,JSCWrapper,InspectorInterfaces}.{cpp,h}',
                                 'node_modules/react-native/ReactCommon/jschelpers/systemJSCWrapper.cpp'
       ss.private_header_files = 'node_modules/react-native/ReactCommon/jschelpers/{JavaScriptCore,JSCWrapper,InspectorInterfaces}.h'
-      ss.pod_target_xcconfig  = { 'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\'' }
       ss.framework            = 'JavaScriptCore'
   end
   
@@ -113,7 +94,6 @@ Pod::Spec.new do |s|
       ss.dependency             'AwsomeReactNative/jschelpers_legacy'
       ss.source_files         = 'node_modules/react-native/ReactCommon/cxxreact/{JSBundleType,oss-compat-util}.{cpp,h}'
       ss.private_header_files = 'node_modules/react-native/ReactCommon/cxxreact/{JSBundleType,oss-compat-util}.h'
-      ss.pod_target_xcconfig  = { 'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\'' }
   end
   
   s.subspec 'jschelpers' do |ss|
@@ -122,14 +102,12 @@ Pod::Spec.new do |s|
       ss.compiler_flags       = folly_compiler_flags
       ss.source_files         = 'node_modules/react-native/ReactCommon/jschelpers/*.{cpp,h}'
       ss.private_header_files = 'node_modules/react-native/ReactCommon/jschelpers/*.h'
-      ss.pod_target_xcconfig  = { 'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\'' }
       ss.framework            = 'JavaScriptCore'
   end
   
   s.subspec 'PrivateDatabase' do |ss|
       ss.source_files         = 'node_modules/react-native/ReactCommon/privatedata/*.{cpp,h}'
       ss.private_header_files = 'node_modules/react-native/ReactCommon/privatedata/*.h'
-      ss.pod_target_xcconfig  = { 'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\'' }
   end
   
   s.subspec 'cxxreact' do |ss|
@@ -140,7 +118,6 @@ Pod::Spec.new do |s|
       ss.source_files         = 'node_modules/react-native/ReactCommon/cxxreact/*.{cpp,h}'
       ss.exclude_files        = 'node_modules/react-native/ReactCommon/cxxreact/SampleCxxModule.*'
       ss.private_header_files = 'node_modules/react-native/ReactCommon/cxxreact/*.h'
-      ss.pod_target_xcconfig  = { 'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\' \'$(PODS_ROOT)/boost-for-react-native\' \'$(PODS_ROOT)/DoubleConversion\' \'$(PODS_ROOT)/Folly\'' }
   end
   
   s.subspec 'ART' do |ss|
