@@ -10,7 +10,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
   
   s.name         = 'AwsomeReactNative'
-  s.version      = '0.1.0'
+  s.version      = '0.0.3'
   s.summary      = "It's an awsome reactnative project."
   s.description  = <<-DESC
   It's an awsome reactnative project. I try to put react native in a separate project.
@@ -23,18 +23,13 @@ Pod::Spec.new do |s|
   s.platform    = :ios, '9.0'
   s.module_name  = 'React'
   s.swift_version = '4.1'
-#  s.default_subspec = 'Core'
-  s.source_files  = 'Classes', 'Classes/**/*.{swift}'
+#  s.source_files  = 'Classes', 'Classes/**/*.{swift}'
   s.pod_target_xcconfig = {
       'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14',
       'OTHER_LDFLAGS' => '-ObjC',
       'DEFINES_MODULE' => 'YES',
       'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\' \'$(PODS_ROOT)/Folly\' \'$(PODS_ROOT)/boost-for-react-native\' \'$(PODS_ROOT)/DoubleConversion\''
   }
-  
-#  s.resource_bundles = {
-#      'AwsomeReactNative' => ['Classes/**/*.{storyboard,xib,xcassets,json,imageset,png}']
-#  }
   
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
