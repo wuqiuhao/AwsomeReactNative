@@ -19,14 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkW-h7-1D9">
-                                <rect key="frame" x="20" y="136" width="335" height="180"/>
-                                <color key="backgroundColor" red="0.94929528240000005" green="0.28727895019999999" blue="0.30511668320000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="gII-g1-Gqz"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="309.5" width="335" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Push to ReactNative">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.94929528240000005" green="0.28727895019999999" blue="0.30511668320000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -41,7 +37,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YkW-h7-1D9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oyB-rg-OBc"/>
-                            <constraint firstItem="YkW-h7-1D9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sAi-ul-zaF"/>
+                            <constraint firstItem="YkW-h7-1D9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qup-sx-jqZ"/>
                             <constraint firstItem="YkW-h7-1D9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uo2-3C-q5K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YkW-h7-1D9" secondAttribute="trailing" constant="20" id="yZx-8I-3d8"/>
                         </constraints>

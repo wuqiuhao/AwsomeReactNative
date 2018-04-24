@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
       'CLANG_CXX_LANGUAGE_STANDARD' => 'c++14',
       'OTHER_LDFLAGS' => '-ObjC',
-      'DEFINES_MODULE' => 'YES',
       'HEADER_SEARCH_PATHS' => '\'$(PODS_TARGET_SRCROOT)/node_modules/react-native/ReactCommon\' \'$(PODS_ROOT)/Folly\' \'$(PODS_ROOT)/boost-for-react-native\' \'$(PODS_ROOT)/DoubleConversion\''
   }
   
