@@ -7,4 +7,5 @@ use_frameworks!
 
 target 'Example' do
     pod 'AwsomeReactNative', :path => './'
+    pod 'AwsomeReactNative/NodeModule', :path => './'
 end

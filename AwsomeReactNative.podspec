@@ -33,6 +33,11 @@ Pod::Spec.new do |s|
   
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
+  # if debug you need dependency this module
+  s.subspec 'NodeModule' do |ss|
+      ss.source_files         = 'AwsomeReactNative/node_modules/*'
+  end
+  
   s.subspec 'yoga' do |ss|
       ss.source_files         = 'node_modules/react-native/ReactCommon/yoga/**/*.{h,c}'
   end
