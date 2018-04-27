@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   
   # if debug you need dependency this module
   s.subspec 'NodeModule' do |ss|
-      ss.source_files         = 'AwsomeReactNative/node_modules/*'
+      ss.source_files         = 'node_modules/**/*.{js}'
   end
   
   s.subspec 'yoga' do |ss|
