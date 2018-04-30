@@ -35,8 +35,9 @@ Pod::Spec.new do |s|
   
   # if debug you need dependency this module
   s.subspec 'NodeModule' do |ss|
-      ss.source_files         = 'node_modules/**/*.{js,json}',
-      							'package.json'
+      ss.source_files         = 'node_modules/react-native/**/*.{js,json}',
+      							            'package.json'
+      ss.exclude_files        = 'node_modules/react-native/local-cli/templates/**/*'
   end
   
   s.subspec 'yoga' do |ss|
