@@ -10,7 +10,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
   
   s.name         = 'AwsomeReactNative'
-  s.version      = '0.0.7'
+  s.version      = '0.0.6'
   s.summary      = "It's an awsome reactnative project."
   s.description  = <<-DESC
   It's an awsome reactnative project. I try to put react native in a separate project.
