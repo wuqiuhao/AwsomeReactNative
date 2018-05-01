@@ -1,0 +1,76 @@
+PODS:
+  - AwsomeReactNative (0.0.6):
+    - AwsomeReactNative/Core (= 0.0.6)
+    - AwsomeReactNative/CxxBridge (= 0.0.6)
+    - AwsomeReactNative/DevSupport (= 0.0.6)
+    - AwsomeReactNative/RCTAnimation (= 0.0.6)
+    - AwsomeReactNative/RCTImage (= 0.0.6)
+    - AwsomeReactNative/RCTText (= 0.0.6)
+    - AwsomeReactNative/RCTWebSocket (= 0.0.6)
+    - AwsomeReactNative/yoga (= 0.0.6)
+  - AwsomeReactNative/Core (0.0.6):
+    - AwsomeReactNative/yoga
+  - AwsomeReactNative/CxxBridge (0.0.6):
+    - AwsomeReactNative/Core
+    - AwsomeReactNative/cxxreact
+    - Folly (= 2016.09.26.00)
+  - AwsomeReactNative/cxxreact (0.0.6):
+    - AwsomeReactNative/jschelpers
+    - boost-for-react-native (= 1.63.0)
+    - Folly (= 2016.09.26.00)
+  - AwsomeReactNative/DevSupport (0.0.6):
+    - AwsomeReactNative/Core
+    - AwsomeReactNative/RCTWebSocket
+  - AwsomeReactNative/fishhook (0.0.6)
+  - AwsomeReactNative/jschelpers (0.0.6):
+    - AwsomeReactNative/PrivateDatabase
+    - Folly (= 2016.09.26.00)
+  - AwsomeReactNative/NodeModule (0.0.6)
+  - AwsomeReactNative/PrivateDatabase (0.0.6)
+  - AwsomeReactNative/RCTAnimation (0.0.6):
+    - AwsomeReactNative/Core
+  - AwsomeReactNative/RCTBlob (0.0.6):
+    - AwsomeReactNative/Core
+  - AwsomeReactNative/RCTImage (0.0.6):
+    - AwsomeReactNative/Core
+    - AwsomeReactNative/RCTNetwork
+  - AwsomeReactNative/RCTNetwork (0.0.6):
+    - AwsomeReactNative/Core
+  - AwsomeReactNative/RCTText (0.0.6):
+    - AwsomeReactNative/Core
+  - AwsomeReactNative/RCTWebSocket (0.0.6):
+    - AwsomeReactNative/Core
+    - AwsomeReactNative/fishhook
+    - AwsomeReactNative/RCTBlob
+  - AwsomeReactNative/yoga (0.0.6)
+  - boost-for-react-native (1.63.0)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.09.26.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
+
+DEPENDENCIES:
+  - AwsomeReactNative
+  - AwsomeReactNative/NodeModule
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - boost-for-react-native
+    - DoubleConversion
+    - Folly
+    - glog
+  https://github.com/wuqiuhao/MyRepo.git:
+    - AwsomeReactNative
+
+SPEC CHECKSUMS:
+  AwsomeReactNative: 7b3bc7682f87f690b5a0e9f1af9243bbc808bf83
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
+  Folly: 211775e49d8da0ca658aebc8eab89d642935755c
+  glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
+
+PODFILE CHECKSUM: a71cead3fd1476a98c5608218b9b4134a2d18e59
+
+COCOAPODS: 1.5.0
