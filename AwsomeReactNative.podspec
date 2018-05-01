@@ -10,7 +10,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1'
 Pod::Spec.new do |s|
   
   s.name         = 'AwsomeReactNative'
-  s.version      = '0.0.8'
+  s.version      = '0.0.9'
   s.summary      = "It's an awsome reactnative project."
   s.description  = <<-DESC
   It's an awsome reactnative project. I try to put react native in a separate project.
@@ -35,8 +35,7 @@ Pod::Spec.new do |s|
   
   # if debug you need dependency this module
   s.subspec 'NodeModule' do |ss|
-      ss.source_files         = 'node_modules/react-native/**/*',
-#                                'node_modules/react-native/local-cli/server/util/external/xsel.exe',
+      ss.preserve_path        = 'node_modules/react-native/**/*',
                                 'package.json'
       ss.exclude_files        = 'node_modules/react-native/local-cli/templates/**/*'
   end
