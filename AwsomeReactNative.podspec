@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
-  if debug you need dependency this module
+  # if debug you need dependency this module
   s.subspec 'NodeModule' do |ss|
       ss.source_files         = 'node_modules/react-native/**/*.{js,json}',
                                 'node_modules/react-native/local-cli/server/util/external/*.*',
