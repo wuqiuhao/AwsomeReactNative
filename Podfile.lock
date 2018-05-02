@@ -1,48 +1,48 @@
 PODS:
-  - AwsomeReactNative (0.0.8):
-    - AwsomeReactNative/Core (= 0.0.8)
-    - AwsomeReactNative/CxxBridge (= 0.0.8)
-    - AwsomeReactNative/DevSupport (= 0.0.8)
-    - AwsomeReactNative/RCTAnimation (= 0.0.8)
-    - AwsomeReactNative/RCTImage (= 0.0.8)
-    - AwsomeReactNative/RCTText (= 0.0.8)
-    - AwsomeReactNative/RCTWebSocket (= 0.0.8)
-    - AwsomeReactNative/yoga (= 0.0.8)
-  - AwsomeReactNative/Core (0.0.8):
+  - AwsomeReactNative (0.0.9):
+    - AwsomeReactNative/Core (= 0.0.9)
+    - AwsomeReactNative/CxxBridge (= 0.0.9)
+    - AwsomeReactNative/DevSupport (= 0.0.9)
+    - AwsomeReactNative/RCTAnimation (= 0.0.9)
+    - AwsomeReactNative/RCTImage (= 0.0.9)
+    - AwsomeReactNative/RCTText (= 0.0.9)
+    - AwsomeReactNative/RCTWebSocket (= 0.0.9)
+    - AwsomeReactNative/yoga (= 0.0.9)
+  - AwsomeReactNative/Core (0.0.9):
     - AwsomeReactNative/yoga
-  - AwsomeReactNative/CxxBridge (0.0.8):
+  - AwsomeReactNative/CxxBridge (0.0.9):
     - AwsomeReactNative/Core
     - AwsomeReactNative/cxxreact
     - Folly (= 2016.09.26.00)
-  - AwsomeReactNative/cxxreact (0.0.8):
+  - AwsomeReactNative/cxxreact (0.0.9):
     - AwsomeReactNative/jschelpers
     - boost-for-react-native (= 1.63.0)
     - Folly (= 2016.09.26.00)
-  - AwsomeReactNative/DevSupport (0.0.8):
+  - AwsomeReactNative/DevSupport (0.0.9):
     - AwsomeReactNative/Core
     - AwsomeReactNative/RCTWebSocket
-  - AwsomeReactNative/fishhook (0.0.8)
-  - AwsomeReactNative/jschelpers (0.0.8):
+  - AwsomeReactNative/fishhook (0.0.9)
+  - AwsomeReactNative/jschelpers (0.0.9):
     - AwsomeReactNative/PrivateDatabase
     - Folly (= 2016.09.26.00)
-  - AwsomeReactNative/NodeModule (0.0.8)
-  - AwsomeReactNative/PrivateDatabase (0.0.8)
-  - AwsomeReactNative/RCTAnimation (0.0.8):
+  - AwsomeReactNative/NodeModule (0.0.9)
+  - AwsomeReactNative/PrivateDatabase (0.0.9)
+  - AwsomeReactNative/RCTAnimation (0.0.9):
     - AwsomeReactNative/Core
-  - AwsomeReactNative/RCTBlob (0.0.8):
+  - AwsomeReactNative/RCTBlob (0.0.9):
     - AwsomeReactNative/Core
-  - AwsomeReactNative/RCTImage (0.0.8):
+  - AwsomeReactNative/RCTImage (0.0.9):
     - AwsomeReactNative/Core
     - AwsomeReactNative/RCTNetwork
-  - AwsomeReactNative/RCTNetwork (0.0.8):
+  - AwsomeReactNative/RCTNetwork (0.0.9):
     - AwsomeReactNative/Core
-  - AwsomeReactNative/RCTText (0.0.8):
+  - AwsomeReactNative/RCTText (0.0.9):
     - AwsomeReactNative/Core
-  - AwsomeReactNative/RCTWebSocket (0.0.8):
+  - AwsomeReactNative/RCTWebSocket (0.0.9):
     - AwsomeReactNative/Core
     - AwsomeReactNative/fishhook
     - AwsomeReactNative/RCTBlob
-  - AwsomeReactNative/yoga (0.0.8)
+  - AwsomeReactNative/yoga (0.0.9)
   - boost-for-react-native (1.63.0)
   - DoubleConversion (1.1.5)
   - Folly (2016.09.26.00):
@@ -64,7 +64,7 @@ SPEC REPOS:
     - glog
 
 SPEC CHECKSUMS:
-  AwsomeReactNative: 3a2f85db71b19a88f4ba1636cab6e70087692dd1
+  AwsomeReactNative: 5403819cf4cc2ea26543f9a26e2e0655cdfcbd37
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
   Folly: 211775e49d8da0ca658aebc8eab89d642935755c
